@@ -3,9 +3,8 @@ Feature: Login
     Scenario: User can log in using valid credentials
         Given I am on the home page
         When I click on the Sign In link
-        And I enter email "peter.parker123456@gmail.com"
-        And I enter password "peter.parker123456"
+        And I enter "peter.parker123456@gmail.com" into Email input field
+        And I enter "peter.parker123456" into Password input field
         And I click the Sign In button
         Then I see the welcome message "Welcome, Peter Parker!"
-        Then My account page contains email "peter.parker123456@gmail.com"
-        
+        And My Account page contains email "peter.parker123456@gmail.com"
